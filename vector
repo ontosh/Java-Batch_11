@@ -1,0 +1,75 @@
+package testpack;
+
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Vector;
+
+public class VectorDemo {
+	
+
+	
+	public static void main(String[] args) {
+
+		 int[] numbers = new int[5];
+		 String[] flowers = { "rose", "lilly", "tulip" };
+
+		Vector myVector = new Vector(10, 5);
+	myVector.add(132);
+	myVector.add(34);
+	myVector.add(98);
+	myVector.add(68);
+	myVector.add(7);
+	myVector.add(12);
+	myVector.add(89);
+	myVector.add(34);
+	myVector.add(1);
+	myVector.add(74);
+	myVector.add(65);
+	myVector.add(23);
+	
+		
+		
+	
+	 Collections.sort(myVector);    // ASC order	
+		Collections.sort(myVector, Collections.reverseOrder()); // DESC order:	
+		System.out.println(myVector);
+		
+		
+		
+		
+		
+
+		System.out.println(myVector.capacity());
+		System.out.println(myVector.size());
+		
+		
+		
+		 // 1st way of printing all the elements of a vector:
+		  System.out.println("The elements of the vector is: "+ myVector);
+		  
+		  
+		   //2nd way . . . . .: 
+		  for (int i = 0; i < myVector.size(); i++) {
+		 System.out.print(myVector.get(i) + " "); }
+		  
+		  
+		  // 3rd way (enhanced for loop: 
+		  for (Object o : myVector) { System.out.println(o + " "); }
+		 
+		  // 4th way (lambda expression):
+		  myVector.forEach(n->System.out.print(n));
+		  
+		 // 5th way (forEach method):
+		  myVector.forEach(System.out::print);
+		  
+		 // 6th way: Iterator:
+		  Iterator<Object> it = myVector.iterator();
+		  while(it.hasNext()) { Object value = it.next(); System.out.println( (value)); }
+		  }
+		
+	
+		
+
+	}
